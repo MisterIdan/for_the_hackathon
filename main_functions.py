@@ -27,7 +27,7 @@ def ship_fishing_vessels(id_fish):
     print("--"*20)
     my_file.write("\n" +"--"*20)
     list_ships = df_catch[df_catch["id_fish"] == id_fish]["id_ves"].unique()
-    print("Список судов, которые официально занимались выловом данной рыбы:\n", list_ships)
+    print("Список номеров судов, которые официально занимались выловом данной рыбы:\n", list_ships)
     my_file.write("\nСписок судов, которые официально занимались выловом данной рыбы:\n")
     my_file.write(str(list_ships))
     
@@ -38,7 +38,7 @@ def plat_fishing_vessels(name_fish):
     print("--"*20)
     my_file.write("\n" +"--"*20)
     list_Plat = new_df[(new_df["id_fish"] == name_fish) & (new_df["id_ves"] == -1)]["id_Plat"].unique()
-    print("Список заводов, которые занимались данной рыбой:\n", list_Plat)
+    print("Список номеров заводов, которые занимались данной рыбой:\n", list_Plat)
     my_file.write("\nСписок заводов, которые занимались данной рыбой:\n")
     my_file.write(str(list_Plat))
     
